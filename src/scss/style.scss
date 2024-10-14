@@ -1,0 +1,133 @@
+.js-alert {
+    &.fixed-background {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.15s;
+    }
+    &.main-container {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 10001;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(-40px);
+        transition: opacity 0.15s, transform 0.15s;
+
+        &.get-center {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+        .js-a-window {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0px 8px 24px rgba(27, 46, 94, 0.08);
+            border: 1px solid #e7eaee;
+            border-radius: 12px;
+            padding: 20px;
+            min-width: 350px;
+            min-height: 100px;
+            max-width: 50%;
+            max-height: 90%;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .js-a-icon {
+                display: block;
+                margin: auto;
+                max-height: 40px;
+                text-align: center;
+                font-family: inherit, Helvetica, Arial;
+                font-size: 17px;
+                font-weight: bold;
+                color: #000;
+                cursor: default;
+                padding: 10px 0px;
+            }
+
+            .js-a-title {
+                display: block;
+                text-align: center;
+                font-family: inherit, Helvetica, Arial;
+                font-size: 17px;
+                font-weight: bold;
+                color: #000;
+                cursor: default;
+                padding: 2px 20px;
+            }
+            .js-a-text {
+                display: block;
+                text-align: center;
+                font-family: inherit, Helvetica, Arial;
+                font-size: 15px;
+                font-weight: normal;
+                color: #000;
+                cursor: default;
+                padding: 2px 20px;
+            }
+            .js-a-text-fields {
+                display: block;
+                .js-a-input {
+                    display: block;
+                    width: 90%;
+                    min-width: 250px;
+                    padding: 10px;
+                    margin: 10px auto;
+                    background-color: #fff;
+                    border: 1px solid #eee;
+                    border-radius: 5px;
+                    text-align: center;
+                    font-family: inherit, Helvetica, Arial;
+                    font-size: 15px;
+                    color: #222;
+                    &:focus {
+                        outline: 1px solid #aaa;
+                    }
+                }
+            }
+            .js-a-buttons {
+                display: block;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: right;
+                border-top: 1px solid #eee;
+                margin-top: 10px;
+                padding: 10px 0 0;
+                width: 100%;
+
+                .js-a-button {
+                    display: inline-block;
+                    font-family: inherit, Helvetica, Arial;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #fff;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    border-radius: 6px;
+                    background-color: #2ca87f;
+
+                    &.js-a-cancel {
+                        color: #fff;
+                        background-color: #dc2626;
+                    }
+                }
+            }
+        }
+    }
+}
